@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>cio
+<html lang="it">
 	<head>
 		<meta charset="utf-8">
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -25,6 +25,10 @@
 
 		<!--Modernizr-->
 		<script src="js/vendor/modernizr.min.js"></script>
+
+        <!--Custom JS-->
+		<script src="js/custom/menu.js"></script>
+
 	</head>
 	<body>
 
@@ -58,28 +62,18 @@
 					<!--Collect the nav links, forms, and other content for toggling-->
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav menu-effect">
-							<li><a href="classes.html">Corsi</a></li>
-							<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Istruttori<i class="fa fa-angle-down"></i></a>
-								<ul role="menu" class="dropdown-menu">
-									<li><a href="trainers.html">Istruttori del mese</a></li>
-									<li><a href="trainers-single.html">Tutti gli istruttori</a></li>
-								</ul>
-							</li>
-							<li><a href="club.html">Chi Siamo</a></li>
+							<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Corsi<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="trainers-single.html">Tutti i corsi</a></li>
+                                    <li><a href="trainers.html">Categorie Corsi</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="club.html">Istruttori</a></li>
+                            <li><a href="club.html">Dove Siamo</a></li>
                             <li><a href="timetable.html">Orari</a></li>
-							<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages<i class="fa fa-angle-down"></i></a>
-								<ul role="menu" class="dropdown-menu">
-									<li><a href="classes-single.html">Classes Single</a></li>
-									<li><a href="store-single.html">Store Single</a></li>
-									<li><a href="news-single.html">Blog Single</a></li>
-									<li><a href="events.html">Events</a></li>
-									<li><a href="events-single.html">Events Single</a></li>
+                            <li><a href="contact.html">Contatti</a></li>
 
-									<li><a href="membership.html">Membership</a></li>
-									<li><a href="error-404.html">Error 404</a></li>
-								</ul>
-							</li>
-							<li><a href="news.html">News</a></li>
+                            <div id="menu"></div>
 						</ul>
 					</div>
 				</div>

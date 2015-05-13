@@ -1,0 +1,95 @@
+article > ul > i,
+h3.title-icon,
+a:hover,
+.btn.btn-testimonials,
+.btn.btn-offer:hover,
+.class-experience-ring .chart,
+.classes-gallery h2 strong,
+.comments-item span em,
+.comments-item .reply-link,
+.copy p a:hover,
+.event-item .ammount,
+.event-item .ammount-news,
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus,
+.navbar .navbar-nav > li.active > a,
+.nav-tabs > li.active > a,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover,
+.news-single-item h6 a,
+.news-single-item p a,
+.news-single-item ul i,
+.features-item a,
+.footer-menu ul li a:hover i,
+.home-new-classes .owl-theme .owl-controls .owl-buttons div:hover,
+.pagination > li > a:hover,
+.pagination > li.active > a,
+.panel-group .panel-title > a:hover,
+.panel-group .panel-title > a i,
+.panel-group .panel-title > a:hover i,
+.plan-item li:first-child,
+.sidebar .panel-group .panel-title > a:hover,
+.sidebar .panel-group .panel-title > a:hover i,
+.sidebar .panel-group .panel-title > a i,
+.sidebar-twitter .tweet_list li .user,
+.store-grid .store-item .foot .price span,
+.store-single-picture .owl-theme .owl-controls .owl-buttons div:hover,
+.testimonials-item p span,
+.timetable.mini li span:first-child,
+.topbar .language a:hover,
+.topbar .top-menu li a:hover,
+.tweet-feed .owl-theme .owl-controls .owl-buttons div:hover {
+  color: #887fbe;
+}
+footer h4:after,
+header .title:before,
+.bannercontainer .caption,
+.bannercontainer .caption:after,
+.classes-gallery figure,
+.btn,
+.btn.btn-store:hover,
+.btn.btn-video:hover,
+.btn.btn-filters.active,
+.btn.btn-filters:hover,
+.btn.btn-testimonials:hover,
+.content-left,
+.features-item i,
+.navbar .navbar-nav .dropdown-menu > li.active > a,
+.navbar .navbar-nav .dropdown-menu > li > a:hover,
+.navbar-toggle span,
+.menu-effect li a:before,
+.offer,
+.slider-range .slider.slider-horizontal .slider-track,
+.slider-range .slider.slider-horizontal .slider-selection {
+  background-color: #887fbe;
+}
+.btn.btn-filters.active,
+.btn.btn-filters:hover,
+.btn.btn-testimonials:hover,
+.navbar-toggle,
+.pagination > li > a:hover,
+.pagination > li.active > a,
+.sidebar .popular li a:hover figure,
+.zoomLens {
+  border-color: #887fbe;
+}
+.classes-gallery h2 strong {
+  border-bottom-color: #887fbe;
+}
+.offer h4 {
+  color: #ffffff;
+}
+.btn.btn-offer {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.btn.btn-offer:hover {
+  background-color: #ffffff;
+}
+.btn.btn-testimonials {
+  border-color: #ffffff;
+}
+.carousel-control:hover,
+.flickr-feed li a:before {
+  background-color: rgba(136, 127, 190, 0.5);
+}
