@@ -1,5 +1,6 @@
 <?php
 
+$id = $_POST['id'];
 //connection to db
 $mysqli = new mysqli("localhost", "ourgym", "", "my_ourgym");
 
@@ -11,7 +12,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM corso JOIN img_corsi WHERE corso.id = img_corsi.corso ORDER BY titolo ASC  ";
+    $query = " SELECT * FROM corso where id = $id  ";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
