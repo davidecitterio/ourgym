@@ -23,8 +23,7 @@ function ready(){
             }
 
             $(".grid").html(el);
-            $(".grid").css("height","300px");
-            $(".grid").trigger(onchange, "height : auto;")
+            $(".grid").css("height","auto");
         },
         error: function(request,error)
         {
