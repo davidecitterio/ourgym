@@ -23,6 +23,7 @@ function ready(){
             }
 
             $(".collapse navbar-collapse").html(el);
+            $(".collapse navbar-collapse").css("height","auto");
         },
         error: function(request,error)
         {

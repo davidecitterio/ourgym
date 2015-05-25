@@ -10,7 +10,7 @@ function ready(){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://ourgym.altervista.org/getElencoCorsi.php", //Relative or absolute path to file.php file
+        url: "http://ourgym.altervista.org/getElencoCategorie.php", //Relative or absolute path to file.php file
         data: {corso:id},
 
         success: function(response) {
@@ -19,12 +19,11 @@ function ready(){
             var el="";
             for(var i=0;i<corso.length;i++){
 
-                el+='<a href="classes-single.html" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
+              el+='<a href="classes-single.html" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].nome+'</p></figcaption></figure></a>';
             }
 
             $(".grid").html(el);
-            $(".grid").css("height","300px");
-            $(".grid").trigger(onchange, "height : auto;")
+            $(".grid").css("height","auto");
         },
         error: function(request,error)
         {

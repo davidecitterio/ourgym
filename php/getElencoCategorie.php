@@ -11,7 +11,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM categoria ORDER BY nome ASC ";
+    $query = " SELECT * FROM categoria JOIN img_categorie on categoria.id = img_categorie.categoria ORDER BY nome ASC ";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

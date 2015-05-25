@@ -19,12 +19,11 @@ function ready(){
             var el="";
             for(var i=0;i<corso.length;i++){
 
-                el+='<a href="classes-single.html" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
+                el += '<figure class="owl-classes-item image-over"><img src="'+corso[i].percorso+'" alt="//"><a href="#"></a><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure>';
             }
 
-            $(".grid").html(el);
-            $(".grid").css("height","300px");
-            $(".grid").trigger(onchange, "height : auto;")
+            $("#owl-classes").html(el);
+            $("#owl-classes").css("height","auto");
         },
         error: function(request,error)
         {
