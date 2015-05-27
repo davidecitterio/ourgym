@@ -19,11 +19,13 @@ function ready(){
             var el="";
             for(var i=0;i<corso.length;i++){
 
-                el+='<a href="classes-single.html" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
+                el+='<a href="corso.html?id='+corso[i].id+'" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
             }
 
             $(".grid").html(el);
-            $(".grid").css("height","auto");
+            $(".grid").css('height','auto');
+            
+        
         },
         error: function(request,error)
         {

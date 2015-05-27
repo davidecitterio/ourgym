@@ -1,9 +1,9 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
-$id = $_GET['id'];
 //connection to db
 $mysqli = new mysqli("localhost", "ourgym", "", "my_ourgym");
 
+$id = $_GET['id'];
 if (mysqli_connect_errno()) { //verify connection
     echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
     exit(); //do nothing else 
@@ -12,7 +12,9 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM ((corso JOIN img_corsi ON corso.id = img_corsi.corso) JOIN cosaoccorre on corso.id = cosaoccorre.id) JOIN faq_corso on corso.id = faq_corso.id WHERE corso.id = '$id' ";
+    $query = " SELECT * from ((istruttore JOIN img_istruttori on istruttore.id = img_istruttori.istruttore) JOIN performance on performance.id = istruttore.id) JOIN faq_istruttore on faq_istruttore.id = istruttore.id
+WHERE  istruttore.id = '$id' ORDER BY istruttore.nome ASC  ";
+    
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

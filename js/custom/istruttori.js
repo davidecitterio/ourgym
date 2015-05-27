@@ -17,7 +17,7 @@ function ready(){
             var el="";
             for(var i=0;i<istr.length;i++){
 
-                el += ('<div class="owl-item" style="width: 320px;"><div class="owl-wrapper-outer"><a href="trainers-single.html"><figure><img src="'+istr[i].percorso+'" alt="//"><figcaption>'+istr[i].nome+'</figcaption></figure></a></div></div>');
+                el += ('<div class="owl-item" style="width: 320px;"><div class="owl-wrapper-outer"><a href="istruttore.html?id='+istr[i].id+'"><figure><img src="'+istr[i].percorso+'" alt="//"><figcaption>'+istr[i].nome+'</figcaption></figure></a></div></div>');   
                 
             }
 
