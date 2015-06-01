@@ -1,9 +1,8 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
+$id = $_GET['id'];
 //connection to db
 $mysqli = new mysqli("localhost", "ourgym", "", "my_ourgym");
-
-$ordine = $_GET['ord'];
 
 if (mysqli_connect_errno()) { //verify connection
     echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
@@ -13,12 +12,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    
-    if ($ordine != "")
-         $query = " SELECT * FROM corso, img_corsi, livello WHERE corso.id = img_corsi.corso AND livello.id = '$ordine' AND livello.id = corso.livello ORDER BY titolo ASC  ";
-    //query execution
-    else
-    $query = " SELECT * FROM corso JOIN img_corsi WHERE corso.id = img_corsi.corso ORDER BY titolo ASC  ";
+    $query = " SELECT * FROM (((corso JOIN img_corsi ON corso.id = img_corsi.corso) JOIN cosaoccorre on corso.id = cosaoccorre.id) JOIN faq_corso on corso.id = faq_corso.id) WHERE corso.categoria = '$id' ORDER BY corso.id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
@@ -26,7 +20,7 @@ else {
     {
         $myArray = array();//create an array
         while($row = $result->fetch_array(MYSQL_ASSOC)) {
-            $myArray[] = $row;
+           $myArray[] = array_map('utf8_encode', $row);
         }
         echo json_encode($myArray);
     }

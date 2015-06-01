@@ -19,7 +19,7 @@ function ready(){
             var el="";
             for(var i=0;i<corso.length;i++){
 
-              el+='<a href="classes-single.html" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].nome+'</p></figcaption></figure></a>';
+              el+='<a href="categoria.html?cat='+corso[i].id+'" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].nome+'</p></figcaption></figure></a>';
             }
 
             $(".grid").html(el);

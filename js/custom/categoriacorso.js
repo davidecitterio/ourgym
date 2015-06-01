@@ -1,5 +1,3 @@
-/*Print all courses*/
-
 $(document).ready(ready);
 
 //funzione che restituisce i parametri passati trmite url
@@ -31,25 +29,22 @@ function parseGetVars()
   return args;
 }
 
+
 function ready(){
     console.log("I'm ready!");
     var id=1;
     
-     var get = parseGetVars();
-     var id = get['ord'];
+    var get = parseGetVars();
+     var id = get['cat'];
     
     console.log(id);
-
-    if (typeof(id)=="undefined")
-        var php = "http://ourgym.altervista.org/getElencoCorsi.php";
-        else
-        var php = "http://ourgym.altervista.org/getElencoCorsi.php?ord="+id;
-            
+    
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: php,
+        url: 'http://ourgym.altervista.org/getCategoriaCorso.php?id='+id,
+        //Relative or absolute path to file.php file
         data: {corso:id},
 
         success: function(response) {
@@ -57,54 +52,24 @@ function ready(){
             var corso=JSON.parse(response);
             var el="";
             for(var i=0;i<corso.length;i++){
-
+            
+            if (i==0)
                 el+='<a href="corso.html?id='+corso[i].id+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
+                
+                else if (i>0 && corso[i].id != corso[i-1].id)
+                     el+='<a href="corso.html?id='+corso[i].id+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
             }
 
             $(".grid").html(el);
             $(".grid").css("height","auto");
+            $("#titolo").html(corso[0].nome);
             
-            
-        
         },
         error: function(request,error)
         {
             console.log("Error");
         }
     });
-
     
-    $.ajax({
-        method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://ourgym.altervista.org/getElencoLivelli.php", //Relative or absolute path to file.php file
-        data: {corso:id},
-
-        success: function(response) {
-            console.log(JSON.parse(response));
-            var corso=JSON.parse(response);
-            if (typeof(id)=="undefined")
-            var el='<a href="corsi.html" data-filter="*" class="btn btn-filters active">All</a>';
-            else
-             var el='<a href="corsi.html" data-filter="*" class="btn btn-filters ">All</a>';
-            
-            for(var i=0;i<corso.length;i++){
-                if (corso[i].id == id)
-                el+='<a href="corsi.html?ord='+corso[i].id+'" data-filter=".'+corso[i].id+'" class="btn btn-filters active">'+corso[i].nome+'</a>';
-                else
-                      el+='<a href="corsi.html?ord='+corso[i].id+'" data-filter=".'+corso[i].id+'" class="btn btn-filters">'+corso[i].nome+'</a>';
-            }
-
-            $(".filters").html(el);
-            
-            
-        
-        },
-        error: function(request,error)
-        {
-            console.log("Error");
-        }
-    });
-
+    
 }
