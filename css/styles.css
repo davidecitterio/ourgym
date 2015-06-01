@@ -13054,6 +13054,8 @@ header .title {
 }
 header .title-classes {
   background-image: url("../img/bg/title-classes.jpg");
+    max-height: 250px;
+    max-width: 1900px;
 }
 header .title-sc {
   background-image: url("../img/bg/title-sc.jpg");
