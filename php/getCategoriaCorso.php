@@ -12,7 +12,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM (((corso JOIN img_corsi ON corso.id = img_corsi.corso) JOIN cosaoccorre on corso.id = cosaoccorre.id) JOIN faq_corso on corso.id = faq_corso.id) WHERE corso.categoria = '$id' ORDER BY corso.id";
+    $query = " SELECT * FROM (((corso JOIN img_corsi ON corso.id = img_corsi.corso) JOIN cosaoccorre on corso.id = cosaoccorre.id) JOIN faq_corso on corso.id = faq_corso.id)  WHERE corso.categoria = '$id' ORDER BY corso.id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

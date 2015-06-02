@@ -58,8 +58,12 @@ function ready(){
             var el="";
             for(var i=0;i<corso.length;i++){
 
-                el+='<a href="corso.html?id='+corso[i].id+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
-            }
+               if (i==0)
+                el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
+                
+                else if (i>0 && corso[i].titolo != corso[i-1].titolo)
+                     el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
+        }
 
             $(".grid").html(el);
             $(".grid").css("height","auto");
