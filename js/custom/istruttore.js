@@ -120,6 +120,37 @@ function ready(){
     });
     
     
+     $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: 'http://ourgym.altervista.org/getIstruttoreCorsi.php?id='+id,
+        //Relative or absolute path to file.php file
+        data: {istr:id},
+
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var istr=JSON.parse(response);
+          var el = '';
+            
+         for(var i=0;i<istr.length;i++){
+
+                el += ('<li><a href="./corso.html?id='+istr[i].id_corso+'"><i class="fa fa-angle-right"></i>'+istr[i].titolo+'</a></li>');
+                
+            }
+                
+
+            $("#corsi").html(el);
+           
+            
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+    
+    
     
      
     

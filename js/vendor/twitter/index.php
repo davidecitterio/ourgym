@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *'); 
 /*
 
 Stan Scates
@@ -24,16 +25,16 @@ class ezTweet {
 	/*************************************** config ***************************************/
 
    // Your Twitter App Consumer Key
-	private $consumer_key = 'pjdRBy3F0PonijkCnaWUFKkvz';
+	private $consumer_key = 'D22iqzYJNdBuj4xZxdgTkKe6K';
 
 	// Your Twitter App Consumer Secret
-	private $consumer_secret = 'HSJL36orXkEQf83fVH4ldtWKb6Q8CYL0C85sKbI0tMkCnss16j';
+	private $consumer_secret = 'w7JrXpj5lUwFFBupqZJ9CSdCPYA1LpmVrMlGzYEXzTWmFVgQPq';
 
 	// Your Twitter App Access Token
-	private $user_token = '822393907-aTBF3JiOVchoTzYNpemZZPUwlmovZLf5qDLNYjGY';
+	private $user_token = '238208126-qpshlBxYd6Si8bW2qtcQray6YQGWvUHXNPlsd2j5';
 
 	// Your Twitter App Access Token Secret
-	private $user_secret = 'Gxi0ETu8ZcwYvC8pAZ2yoL2hRNuBM86wCqJU6eub2qFtF';
+	private $user_secret = 'DznPZTbOl9SiJykteVAAQ4Tf5pddzvzFqCexLsYoS3n9N';
 
 	// Path to tmhOAuth libraries
 	private $lib = './lib/';

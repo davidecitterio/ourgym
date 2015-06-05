@@ -2,6 +2,14 @@
 
 $(document).ready(ready);
 
+$(window).resize(function() {
+  console.log('window was resized');
+    $(".grid").css("height","auto");
+});
+
+
+
+    
 //funzione che restituisce i parametri passati trmite url
 function parseGetVars()
 {
@@ -59,7 +67,7 @@ function ready(){
             for(var i=0;i<corso.length;i++){
 
                if (i==0)
-                el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
+                el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><p>'+corso[i].titolo+'</p></figure></a>';
                 
                 else if (i>0 && corso[i].titolo != corso[i-1].titolo)
                      el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></a>';
@@ -67,7 +75,6 @@ function ready(){
 
             $(".grid").html(el);
             $(".grid").css("height","auto");
-            
             
         
         },

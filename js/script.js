@@ -138,7 +138,7 @@
       if ($(elm).length) {
         return $(elm).tweet({
           username: twitter_user,
-          modpath: 'js/vendor/twitter/',
+          modpath: 'http://ourgym.altervista.org/js/vendor/twitter/',
           count: count,
           loading_text: 'loading twitter feed...',
           join_text: "<br>@" + twitter_user + " - ",
@@ -678,8 +678,8 @@
       initRevolution();
       initSliderRange('#slider-price .slider', '£', '', 1, 9300, 1, [1222, 9300], 'hide');
       initTooltip('.timetable a', 'top', '#3b464c');
-      initTwitterFooter('#tweet-feed', 'Coralixthemes');
-      initTwitterSidebar('#sidebar-tweet-feed', 'Coralixthemes');
+      initTwitterFooter('#tweet-feed', 'DavideCitterio');
+      initTwitterSidebar('#sidebar-tweet-feed', 'DavideCitterio');
       initVideoBg('#video-bg');
       return null;
     });

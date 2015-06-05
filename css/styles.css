@@ -12200,8 +12200,8 @@ ul {
   text-align: center;
   z-index: 1;
 }
-.image-over:hover figcaption::after,
-.image-over:hover figcaption::before {
+.image-over figcaption::after,
+.image-over figcaption::before {
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -12211,14 +12211,14 @@ ul {
   -ms-transform: scale(1);
   transform: scale(1);
 }
-.image-over:hover figcaption::after {
+.image-over figcaption::after {
   -webkit-transition-delay: 0.15s;
   -moz-transition-delay: 0.15s;
   -o-transition-delay: 0.15s;
   -ms-transition-delay: 0.15s;
   transition-delay: 0.15s;
 }
-.image-over:hover img {
+.image-over img {
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
@@ -12233,7 +12233,7 @@ ul {
   -ms-transition-delay: 0.15s;
   transition-delay: 0.15s;
 }
-.image-over:hover p {
+.image-over p {
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -12878,7 +12878,7 @@ ul {
 }
 .social li a.twitter:hover {
   border-color: #74cee8;
-  color: #74cee8;
+  color:black;
 }
 .social li a.youtube:hover {
   border-color: #b00;
@@ -13359,7 +13359,7 @@ footer.e404 {
   display: inline-block;
 }
 .tweet-feed ul li a {
-  color: #fff;
+  color: black;
   font-size: 1em;
 }
 .tweet-feed ul li .user {
@@ -14463,11 +14463,17 @@ footer.e404 {
   h3.title-icon {
     font-size: 2em;
   }
-  .image-over {
-    height: 150px;
+  .image-over figcaption::before {
+    bottom: 30px;
+    left: 10px;
+    right: 10px;
+    top: 30px;
   }
-  .image-over p {
-    display: none;
+  .image-over figcaption::after {
+    bottom: 10px;
+    left: 30px;
+    right: 30px;
+    top: 10px;
   }
   .bg-video .over h3 {
     font-size: 1.9em;
