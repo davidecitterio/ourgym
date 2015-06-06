@@ -633,7 +633,7 @@
       initFancyBoxSingleStore("#img-single-store");
       initFormsSend('form');
       initFlickrFeed('.flickr-feed', '9890806@N04', 8, '<li><a href="{{link}}" target="_blank"><img src="{{image_s}}" alt="//"></a></li>');
-      initMaps('#map', 48.860093, 2.294694, 48.858093, 2.294694);
+      initMaps('#map', 45.478032, 9.225668, 45.478032, 9.225668);
       initMenuAnimation();
       initOwlCarousel("#owl-partners", {
         items: 6,

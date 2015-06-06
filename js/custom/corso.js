@@ -86,4 +86,38 @@ function ready(){
             console.log("Error");
         }
     });
+    
+    
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: 'http://ourgym.altervista.org/getCorsoIstruttore.php?id='+id,
+        //Relative or absolute path to file.php file
+        data: {istr:id},
+
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var istr=JSON.parse(response);
+          var el = '';
+            
+         for(var i=0;i<istr.length;i++){
+
+                el += ('<li><a href="./istruttore.html?id='+istr[i].id_istruttore+'"><i class="fa fa-angle-right"></i>'+istr[i].nome+'</a></li>');
+                
+            }
+                
+
+            $("#istruttori").html(el);
+           
+            
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+    
 }
+
+

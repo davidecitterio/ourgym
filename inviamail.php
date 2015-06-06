@@ -1,9 +1,10 @@
 <?php
+header('Access-Control-Allow-Origin: *'); 
 $data = json_decode($_REQUEST['json']);
 
-$to="usuario@company.com"; // Your Email
+$to="davidecitt@hotmail.it"; // Your Email
 
-$subject="Message from the website";
+$subject="Contatto da OURGYM.COM";
 
 $date=date("l, F jS, Y");
 $time=date("h:i A");
@@ -59,7 +60,7 @@ if ($valida) {
 
 	echo "<div class='alert alert-success'>
 		<a class='close' data-dismiss='alert'>×</a>
-		<strong>Thank you!</strong>
+		<strong>Grazie!</strong>
 	</div>";
 }
 
