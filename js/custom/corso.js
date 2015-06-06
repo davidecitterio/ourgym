@@ -70,6 +70,7 @@ function ready(){
             $("title").html('OURGYM - '+istr[0].titolo);
             $("#sottotitolo").html('<h2>'+istr[0].sottotitolo+'</h2>');
             $(".descr").html(istr[0].descrizione);
+            $(".descr").css("text-align","justify");
             $("#motto").html('<p>" '+istr[0].motto+' "</p>');
             $("#foto").html(img);
             $('#forza').html('<div role="progressbar" aria-valuenow="'+istr[0].forza+'" aria-valuemin="0" aria-valuemax="100" style="width: '+istr[0].forza+'%;" class="progress-bar"><span>Forza - '+istr[0].forza+'%</span></div>');
@@ -79,7 +80,9 @@ function ready(){
             $('#domanda1').html(''+istr[0].domanda1+'');
             $('#domanda2').html(''+istr[0].domanda2+'');
             $('#risposta1').html(''+istr[0].risposta1+'');
+            $('#risposta1').css("text-align","justify");
             $('#risposta2').html(''+istr[0].risposta2+'');
+            $('#risposta2').css("text-align","justify");
         },
         error: function(request,error)
         {

@@ -69,16 +69,38 @@ function ready(){
             $("h1").html(nome);
             $("title").html('OURGYM - '+nome);
             $(".bio").html(bio);
+            $(".bio").css("text-align","justify");
             $("#foto").html(img);
             $("#p1").html('<div data-percent='+istr[0].p1+' class="chart easyPieChart"><span class="percent">'+istr[0].p1+'</span><canvas width="190" height="190"> </div><h3>Forza</h3>');
             $("#p2").html('<div data-percent='+istr[0].p2+' class="chart"><span class="percent">'+istr[0].p2+'</span></div><h3>Resistenza</h3>');
             $("#p3").html('<div data-percent='+istr[0].p3+' class="chart"><span class="percent">'+istr[0].p3+'</span></div><h3>Equilibrio</h3>');
             $("#p4").html('<div data-percent='+istr[0].p4+' class="chart"><span class="percent">'+istr[0].p4+'</span></div><h3>Riflessi</h3>');
             
-            $("#f1").html(istr[0].r1);
-            $("#f2").html(istr[0].r2);
-            $("#f3").html(istr[0].r3);
-            $("#f4").html(istr[0].r4);
+            
+            if(istr[0].r1!=""){
+                $("#f1").html(istr[0].r1);
+                $("#f1").css("text-align","justify");
+            }else{
+                $("#uno").css("display","none");
+            }
+            if(istr[0].r2!=""){
+                $("#f2").html(istr[0].r2);
+                $("#f2").css("text-align","justify");
+            }else{
+                $("#due").css("display","none");
+            }
+            if(istr[0].r3!=""){
+                $("#f3").html(istr[0].r3);
+                $("#f3").css("text-align","justify");
+            }else{
+                $("#tre").css("display","none");
+            }
+            if(istr[0].r3!=""){
+                $("#f4").html(istr[0].r4);
+                $("#f4").css("text-align","justify");
+            }else{
+                $("#quattro").css("display","none");
+            }
             
         },
         error: function(request,error)
