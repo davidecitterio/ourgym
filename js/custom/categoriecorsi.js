@@ -19,7 +19,7 @@ function ready(){
             var el="";
             for(var i=0;i<corso.length;i++){
 
-              el+='<a href="categoria.html?cat='+corso[i].categoria+'" class="retro"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].nome+'</figcaption></figure></a>';
+              el+='<a href="categoria.html?cat='+corso[i].categoria+'" class="retro"><figure class="image-over"><img src="http://ourgym.altervista.org/'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].nome+'</figcaption></figure></a>';
             }
 
             $(".grid").html(el);

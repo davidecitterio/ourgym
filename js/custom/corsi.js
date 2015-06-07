@@ -67,10 +67,10 @@ function ready(){
             for(var i=0;i<corso.length;i++){
 
                if (i==0)
-               el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].titolo+'</figcaption></figure></a>';
+               el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="http://ourgym.altervista.org/'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].titolo+'</figcaption></figure></a>';
                 
                 else if (i>0 && corso[i].titolo != corso[i-1].titolo)
-                     el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].titolo+'</figcaption></figure></a>';
+                     el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="http://ourgym.altervista.org/'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].titolo+'</figcaption></figure></a>';
         }
 
             $(".grid").html(el);

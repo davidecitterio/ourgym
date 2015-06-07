@@ -12798,7 +12798,7 @@ ul {
  *
 /********************************  $Skills  ********************************/
 .skills {
-  background-image: url("../img/bg/skills.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/skills.jpg");
   height: 400px;
   margin: 30px 0 50px;
   position: relative;
@@ -13038,43 +13038,43 @@ header .title {
   position: relative;
 }
 header .title-classes {
-  background-image: url("../img/bg/title-classes.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-classes.jpg");
 }
 header .title-sc {
-  background-image: url("../img/bg/title-sc.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-sc.jpg");
 }
 header .title-trainer {
-  background-image: url("../img/bg/title-trainer.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-trainer.jpg");
 }
 header .title-trainers-single {
-  background-image: url("../img/bg/title-trainers-single.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-trainers-single.jpg");
 }
 header .title-club {
-  background-image: url("../img/bg/title-club.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-club.jpg");
 }
 header .title-store {
-  background-image: url("../img/bg/title-store.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-store.jpg");
 }
 header .title-store-single {
-  background-image: url("../img/bg/title-store-single.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-store-single.jpg");
 }
 header .title-events {
-  background-image: url("../img/bg/title-events.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-events.jpg");
 }
 header .title-events-single {
-  background-image: url("../img/bg/title-events-single.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-events-single.jpg");
 }
 header .title-news {
-  background-image: url("../img/bg/title-news.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-news.jpg");
 }
 header .title-bs {
-  background-image: url("../img/bg/title-bs.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-bs.jpg");
 }
 header .title-membership {
-  background-image: url("../img/bg/title-membership.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-membership.jpg");
 }
 header .title-contact {
-  background-image: url("../img/bg/title-contact.jpg");
+  background-image: url("http://ourgym.altervista.org/img/bg/title-contact.jpg");
 }
 header .title:before {
   content: '';
@@ -13095,7 +13095,7 @@ header .title h1 {
 /********************************  $error 404  *********************************/
 .error-404 {
   background-color: transparent;
-  background-image: url("../img/404.jpg");
+  background-image: url("http://ourgym.altervista.org/img/404.jpg");
   background-repeat: no-repeat;
   background-position: 180px;
   -webkit-background-size: cover;

@@ -58,7 +58,7 @@ function ready(){
             
          for(var i=0;i<istr.length;i++){
 
-                img += ('<figure><img src="'+istr[i].percorso+'"></figure>');   
+                img += ('<figure><img src="http://ourgym.altervista.org/'+istr[i].percorso+'"></figure>');   
                 
             }
                 

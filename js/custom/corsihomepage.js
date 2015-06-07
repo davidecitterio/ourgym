@@ -19,7 +19,7 @@ function ready(){
             var el="";
             for(var i=0;i<corso.length;i++){
 
-                el += '<div class="owl-item"> <figure class="owl-classes-item image-over"><img src="'+corso[i].percorso+'" alt="//"><a href="#"></a><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></div>';
+                el += '<div class="owl-item"> <figure class="owl-classes-item image-over"><img src="http://ourgym.altervista.org/'+corso[i].percorso+'" alt="//"><a href="#"></a><figcaption><p>'+corso[i].titolo+'</p></figcaption></figure></div>';
             }
 
             $("#owl-classes").html(el);

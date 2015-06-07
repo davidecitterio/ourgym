@@ -58,7 +58,7 @@ function ready(){
 
                 nome += (''+istr[i].nome+'');   
                 bio += (''+istr[i].bio+'');
-                img += ('<img src="'+istr[i].percorso+'">');   
+                img += ('<img src="http://ourgym.altervista.org/'+istr[i].percorso+'">');   
                 
             }
                 
@@ -126,7 +126,7 @@ function ready(){
             
          for(var i=0;i<istr.length;i++){
 
-                el += ('<div class="testimonials-item"><figure><img src="'+istr[i].immagine+'" alt="//"></figure><p>'+istr[i].descrizione+'<span>'+istr[i].luogo+'</span></p></div>');
+                el += ('<div class="testimonials-item"><figure><img src="http://ourgym.altervista.org/'+istr[i].immagine+'" alt="//"></figure><p>'+istr[i].descrizione+'<span>'+istr[i].luogo+'</span></p></div>');
                 
             }
                 
