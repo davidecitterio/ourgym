@@ -13522,10 +13522,12 @@ footer.e404 {
   border-bottom-style: solid;
   font-weight: 400;
 }
-.classes-gallery .grid {
+.classes-gallery .corsi{
   margin: 0 -15px;
   height : auto;
+  float : center;
 }
+
 /**
  *
  *

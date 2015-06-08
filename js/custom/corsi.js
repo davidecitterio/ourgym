@@ -1,15 +1,8 @@
 /*Print all courses*/
 
+
 $(document).ready(ready);
 
-$(window).resize(function() {
-  console.log('window was resized');
-    $(".grid").css("height","auto");
-});
-
-
-
-    
 //funzione che restituisce i parametri passati trmite url
 function parseGetVars()
 {
@@ -73,8 +66,8 @@ function ready(){
                      el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="http://ourgym.altervista.org/'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].titolo+'</figcaption></figure></a>';
         }
 
-            $(".grid").html(el);
-            $(".grid").css("height","auto");
+            $(".corsi").html(el);
+            $(".corsi").css("height","auto");
             
         
         },

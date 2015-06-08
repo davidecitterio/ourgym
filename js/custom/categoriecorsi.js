@@ -22,8 +22,8 @@ function ready(){
               el+='<a href="categoria.html?cat='+corso[i].categoria+'" class="retro"><figure class="image-over"><img src="http://ourgym.altervista.org/'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].nome+'</figcaption></figure></a>';
             }
 
-            $(".grid").html(el);
-            $(".grid").css("height","auto");
+            $(".catcorsi").html(el);
+            $(".catcorsi").css("height","auto");
         },
         error: function(request,error)
         {
