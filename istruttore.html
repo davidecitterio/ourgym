@@ -33,7 +33,7 @@
 		<script src="js/vendor/modernizr.min.js"></script>
 	</head>
     
-	<body>
+	<body onLoad="fbFetch()">
 		<header>
             
 			<!--begin Top Bar-->
@@ -101,7 +101,9 @@
                             <div class="sidebar">
                             <ul class="categories" id="corsi">
                             </ul>
-                            </div><br><br><br>
+                            </div>
+                             <h2>MyPics</h2>
+                    <div id="fb-feed" class="fb-feed"></div><br><br><br><br>
                             <h2>Awards</h2>
 							<div class="premi"></div>
 						</div>
@@ -153,6 +155,7 @@
         				<div class="col-md-6">
                             <h2>Tweets!</h2>
                                 <p><div id="tweet-feed" class="tweet-feed"></div></p>
+                
 						</div>
             </article>           
             <article data-speed="4" class="skills parallax">

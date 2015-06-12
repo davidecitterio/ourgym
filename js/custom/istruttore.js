@@ -171,7 +171,51 @@ function ready(){
             console.log("Error");
         }
     });
-    
+   
 
+
+var name="";
+var get = parseGetVars();
+var id = get['id'];
+   
+      $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: 'http://ourgym.altervista.org/getFacebook.php?id='+id,
+        //Relative or absolute path to file.php file
+        data: {istr:id},
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var istr=JSON.parse(response);
+                name = istr[0].facebook;
+             var fburl =  'https://graph.facebook.com/'+name+'/feed?fields=message,picture,link,from&limit=5&access_token=CAAHEWLR0oZAEBACCuUT0BJU6UToHtU39zxtR1ViyxzjRqoQKAXZAp1XZCyvyHaK32wvtKfZBlAa05wiJh1h28Oyx8zPIap85vn0HYv9ZCrsZAvlogTKmGWanpbEnYiZCnpKHanwpsJY8u9FFw0lVgt9ROe8IUoL5p0r2d4hpCo2xmzW7rdHI1LlEee7FBrry5u68FslK8TJZBZCQSveEksX29';
+            
+            $.getJSON(fburl,function(json){
+var html = "<div class='flickr-feed'>";
+//loop through and within data array's retrieve the message variable.
+//XSS ATTACK FIX AS OF 6/1/12 PLEASE UPDATE TO THIS ASAP.
+$.each(json.data,function(i,fb){
+html += "<li><a href='"+$('<div>').html(fb.link).text() +"' target='_blank'><img src='"+ $('<div>').html(fb.picture).text() +"'></a></li>";
+}); 
+    html += "</div>";
+
+//A little animation once fetched
+$('#fb-feed').animate({opacity:0}, 500, function(){
+$('#fb-feed').html(html);
+});
+$('#fb-feed').animate({opacity:1}, 500);
+});
+            
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
     
+    
+    var fburl =  'https://graph.facebook.com/'+name+'/feed?fields=message,picture,link,from&limit=5&access_token=CAACEdEose0cBAKgKG3ydqQGf4EFNmRypvsgBUAG1Iq5vKK3oyVANufctpeGlQiy3fL9KZCCzDtjGX8zrM3P9KeVlffInkOBOaoBFZBrmitQSZCyZAQVYcfpXhVUdRA7reU4bpsBZCVzeWqbWBAfvRbrKdXbZCZCakUtqFgxQZCJHIJzkJ1pK7Eqiz4LAHtqkq2ZANxk7KqBWboOzubfhxjRLc82JbaY2mb7wZD';
+       //Use jQuery getJSON method to fetch the data from the url and then create our unordered list with the relevant data.
+
 }
