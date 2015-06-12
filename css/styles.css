@@ -14583,6 +14583,13 @@ Queries  *****************************/
     .bg-video{
     display : none;
  } 
+    .skills{
+    display : none;
+ } 
+     .parallax{
+    display : none;
+ } 
+    
 }
 /**
  *
@@ -14671,4 +14678,10 @@ Queries  *****************************/
 .bg-video{
     display : none;
 }
+     .skills{
+    display : none;
+ } 
+     .parallax{
+    display : none;
+ } 
 }
