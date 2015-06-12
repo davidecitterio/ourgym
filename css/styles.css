@@ -13367,6 +13367,44 @@ footer.e404 {
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+/*****************************  $Facebook Feed  *****************************/
+.fb-feed ul {
+  list-style: none;
+}
+.fb-feed ul li {
+  color: #aaa;
+  display: inline-block;
+  font-size: 0.875em;
+  line-height: 1.5em;
+}
+.fb-feed ul li:first-child {
+  display: inline-block;
+}
+.fb-feed ul li a {
+  color: balck;
+  font-size: 1em;
+}
+.fb-feed ul li .user {
+  display: block;
+  margin: 5px 0 0 0;
+}
+.fb-feed .owl-theme .owl-controls {
+  margin: 0;
+  text-align: left;
+}
+.fb-feed .owl-theme .owl-controls .owl-buttons div {
+  background-color: transparent;
+  font-size: 1.1em;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  padding: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 /**
  *
  *
@@ -14381,7 +14419,8 @@ footer.e404 {
  *
  *
 /***************************************************************************/
-/****************************  $Media Queries  *****************************/
+/****************************  $
+Queries  *****************************/
 /*
  *
  * The styles by default are for desktops devices with resolutions
@@ -14538,6 +14577,9 @@ footer.e404 {
   .home-new-classes .owl-theme .owl-controls {
     padding: 0;
   }
+ .class-gallery{
+     align-content: center;
+ }
 }
 /**
  *

@@ -4,6 +4,34 @@
  * The script is encapsulated in an self-executing anonymous function,
  * to avoid conflicts with other libraries
  */
+//funzione che restituisce i parametri passati trmite url
+function parseGetVars()
+{
+  // creo una array
+  var args = new Array();
+  // individuo la query (cioè tutto quello che sta a destra del ?)
+  // per farlo uso il metodo substring della proprietà search
+  // dell'oggetto location
+  var query = window.location.search.substring(1);
+  // se c'è una querystring procedo alla sua analisi
+  if (query)
+  {
+    // divido la querystring in blocchi sulla base del carattere &
+    // (il carattere & è usato per concatenare i diversi parametri della URL)
+    var strList = query.split('&');
+    // faccio un ciclo per leggere i blocchi individuati nella querystring
+    for(str in strList)
+    {
+      // divido ogni blocco mediante il simbolo uguale
+      // (uguale è usato per l'assegnazione del valore)
+      var parts = strList[str].split('=');
+      // inserisco nella array args l'accoppiata nome = valore di ciascun
+      // parametro presente nella querystring
+      args[unescape(parts[0])] = unescape(parts[1]);
+    }
+  }
+  return args;
+}
 
 (function() {
   jQuery.noConflict();
@@ -47,6 +75,9 @@
      * + document.ready()
      * + windows.load()
      */
+    var get = parseGetVars();
+     var id = get['id'];
+      
     var changeIconCollapse, changeTooltipColorTo, getFieldsData, getTwitterFeed, initAnimateOnAppear, initChangeIconCollapse, initChartJs, initElevateZoom, initFancyBoxSingleStore, initFlickrFeed, initFormsSend, initIsotope, initMaps, initMenuAnimation, initOwlCarousel, initParallax, initPieChart, initRevolution, initSliderRange, initTooltip, initTwitterFooter, initTwitterSidebar, initVideoBg, refreshIsotope, sendData, sendForm, showResults, startBgVideo, stopBgVideo;
     changeIconCollapse = function(e, icons) {
       var $emt, $ico, evt, hasCollapsing, hasIn;
@@ -578,6 +609,32 @@
 
     /* begin $( document ).ready() block. */
     $(function() {
+        var coordX, coordY;
+        //SCARICAMENTO COORDINATE MAPPA
+        $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://ourgym.altervista.org/getMappa.php",                 //Relative or absolute path to file.php file
+        
+
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var coord=JSON.parse(response);
+
+              coordX=coord[0].cx;
+              coordY=coord[0].cy;
+            initMaps('#map', coordX,coordY, coordX, coordY);
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+        
+        
+        
       initAnimateOnAppear('.animated');
       initChangeIconCollapse($('#accordion'), {
         'closed': 'fa fa-plus-square-o',
@@ -633,7 +690,6 @@
       initFancyBoxSingleStore("#img-single-store");
       initFormsSend('form');
       initFlickrFeed('.flickr-feed', '9890806@N04', 8, '<li><a href="{{link}}" target="_blank"><img src="{{image_s}}" alt="//"></a></li>');
-      initMaps('#map', 45.478032, 9.225668, 45.478032, 9.225668);
       initMenuAnimation();
       initOwlCarousel("#owl-partners", {
         items: 6,
@@ -678,8 +734,33 @@
       initRevolution();
       initSliderRange('#slider-price .slider', '£', '', 1, 9300, 1, [1222, 9300], 'hide');
       initTooltip('.timetable a', 'top', '#3b464c');
-      initTwitterFooter('#tweet-feed', 'DavideCitterio');
-      initTwitterSidebar('#sidebar-tweet-feed', 'DavideCitterio');
+     
+        /*Download twitter name*/
+        $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: 'http://ourgym.altervista.org/getTwitterName.php?id='+id,
+        //Relative or absolute path to file.php file
+        data: {istr:id},
+
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var istr=JSON.parse(response);
+         
+
+             initTwitterFooter('#tweet-feed', istr[0].twitter);
+            initTwitterSidebar('#sidebar-tweet-feed', istr[0].twitter);
+           
+            
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+        
+     
       initVideoBg('#video-bg');
       return null;
     });
