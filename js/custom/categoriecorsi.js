@@ -24,8 +24,10 @@ function ready(){
 
             $(".catcorsi").html(el);
             $(".catcorsi").css("height","auto");
+            $(".catcorsi").css("width","auto");
         },
         error: function(request,error)
+        
         {
             console.log("Error");
         }

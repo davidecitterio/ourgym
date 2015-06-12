@@ -59,7 +59,8 @@ function ready(){
                 else if (i>0 && corso[i].titolo != corso[i-1].titolo)
                      el+='<a href="corso.html?id='+corso[i].corso+'" class="'+corso[i].livello+'"><figure class="image-over"><img src="http://ourgym.altervista.org/'+corso[i].percorso+'" alt="//"><figcaption>'+corso[i].titolo+'</figcaption></figure></a>';
             }
-
+            
+            $("title").html('OURGYM - '+corso[0].nome);
             $(".grid").html(el);
             $(".grid").css("height","auto");
             $("#titolo").html(corso[0].nome);
