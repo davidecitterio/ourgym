@@ -14580,6 +14580,9 @@ Queries  *****************************/
  .class-gallery{
      align-content: center;
  }
+    .bg-video{
+    display : none;
+ } 
 }
 /**
  *
@@ -14665,4 +14668,7 @@ Queries  *****************************/
     border-color: #e1e1e1 transparent;
     top: -10px;
   }
+.bg-video{
+    display : none;
+}
 }
