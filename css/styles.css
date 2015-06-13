@@ -14518,6 +14518,9 @@ Queries  *****************************/
   .news-single-item ul {
     margin: 0 0 20px -18px;
   }
+    #foto {
+    display : none;
+  }
 }
 /**
  *
@@ -14589,7 +14592,10 @@ Queries  *****************************/
      .parallax{
     display : none;
  } 
-    
+.separator {
+    height: 70px;
+  }
+   
 }
 /**
  *
@@ -14626,7 +14632,7 @@ Queries  *****************************/
     text-align: center;
   }
   .separator {
-    height: 20px;
+    height: 70px;
   }
   h2:first-child {
     margin-top: 20px;
@@ -14684,4 +14690,8 @@ Queries  *****************************/
      .parallax{
     display : none;
  } 
+    
+ #foto {
+    display : inherit;
+  }
 }
